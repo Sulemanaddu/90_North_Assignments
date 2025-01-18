@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #82510d; 
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    margin-top: 60px;
+    min-height: calc(100vh - 110px);
+}
+
+/* Left menu */
+.left-menu {
+    width: 250px;
+    background-color: #e6e9ef; /* Light gray */
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    border-right: 1px solid #d1d5db; /* Slightly darker gray border */
+}
+
+.left-menu.collapsed {
+    transform: translateX(-250px);
+}
+
+.toggle-btn {
+    position: absolute;
+    left: 260px;
+    top: 70px;
+    padding: 5px 10px;
+    background: #f29812; /* Teal */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.toggle-btn:hover {
+    background: #82510d; /* Darker teal */
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 3rem;
+    background-color: #ffffff; /* White */
+}
+
+/* Right panel */
+.right-panel {
+    width: 250px;
+    background-color: #e6e9ef; /* Light gray */
+    padding: 1rem;
+    border-left: 1px solid #d1d5db; /* Slightly darker gray border */
+}
+
+/* Footer */
+.footer {
+    background-color: #82510d; /* Navy blue */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    height: 50px;
+}
+
+/* Responsive design */
+@media (max-width: 1600px) and (min-width: 992px) {
+    body {
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 700px) {
+    body {
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 600px) {
+    body {
+        zoom: 0.75;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        zoom: 0.5;
+    }
+    
+    .right-panel {
+        display: none;
+    }
+    
+    .left-menu {
+        position: absolute;
+        height: 100%;
+    }
+}
